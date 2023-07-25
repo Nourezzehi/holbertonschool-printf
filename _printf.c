@@ -13,6 +13,8 @@ int _printf(const char *format, ...)
 		{'s', print_string}
 	};
 
+	if (!format)
+		return (0);
 	va_start(args, format);
 	va_copy(args_cp, args);
 	while (*(format + i))
