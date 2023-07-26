@@ -37,5 +37,16 @@ void print_int(va_list args)
 	int num;
 
 	num = va_arg(args, int);
-	_putchar(num + '0');
+	if (num == INT_MIN)
+		{
+			_putchar(INT_MIN % 10);
+			num /= 10;
+		}
+	if (num >= 0)
+		print_sign(num);
+	else
+	{
+		_putchar('-');
+		print_sign(-num);
+	}
 }

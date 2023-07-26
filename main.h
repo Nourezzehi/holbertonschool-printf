@@ -1,6 +1,6 @@
 #ifndef HEADER_H
 #define HEADER_H
-
+#include "limits.h"
 #include <stdarg.h>
 /**
  * struct format - the format components
@@ -19,5 +19,6 @@ void print_string(va_list);
 void print_int(va_list);
 int conv(va_list, format_t *, const char *);
 int _putchar(char);
+void print_sign(int);
 
 #endif
