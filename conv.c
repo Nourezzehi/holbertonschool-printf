@@ -14,7 +14,7 @@ int conv(va_list args, format_t *tab, const char *format)
 {
 	int ok, j, i = 0, count = 0;
 
-	while (*(format + i))
+	while (*(format + i) != '\0')
 	{
 		ok = 0;
 		j = 0;
@@ -37,14 +37,15 @@ int conv(va_list args, format_t *tab, const char *format)
 					_putchar('%');
 					count++;
 				}
-				else{
-				write(1, format + i - 1, 2);
-				count += 2;
+				else
+				{
+					write(1, format + i - 1, 2);
+					count += 2;
 				}
 			}
 			i++;
 		}
-		else if(*(format + i) != '%')
+		else
 		{
 			_putchar(*(format + i));
 			count++;

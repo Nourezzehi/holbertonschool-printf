@@ -6,7 +6,6 @@
 #include "main.h"
 int _printf(const char *format, ...)
 {
-	int count;
 	va_list args, args_cp;
 	format_t tab[] = {
 		{'c', print_char},
@@ -19,6 +18,5 @@ int _printf(const char *format, ...)
 		return (0);
 	va_start(args, format);
 	va_copy(args_cp, args);
-	count = conv(args_cp, tab, format);
-	return (count);
+	return (conv(args_cp, tab, format));
 }
