@@ -10,7 +10,7 @@ void print_char(va_list args)
 	char c;
 
 	c = va_arg(args, int);
-	write(1, &c, 1);
+	_putchar(c);
 }
 
 /**
@@ -20,9 +20,21 @@ void print_char(va_list args)
 void print_string(va_list args)
 {
 	char *s;
+	int i = 0;
 
 	s = va_arg(args, char *);
 	if (!s)
 		return;
-	write(1, s, strlen(s));
+	while(s + i)
+	{
+		_putchar(*(s + i));
+	}
+}
+
+void print_int(va_list args)
+{
+	int num;
+
+	num = va_arg(args, int);
+	_putchar(num + '0');
 }

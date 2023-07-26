@@ -26,14 +26,11 @@ int conv(va_list args_cp, format_t *tab, const char *format )
 			{
 			write(1, format + i - 1, 2);
 			}
-			i++;
 		}
 		else
-		{
-			write(1, format + i, 1);
-			i++;
-		}
+			_putchar(*(format + i));
 		count++;
+		i++;
 	}
 	return (count);
 }
