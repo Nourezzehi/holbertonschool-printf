@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 	format_t tab[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'%', print_percent},
 		{'d', print_int},
 		{'i', print_int}
 	};

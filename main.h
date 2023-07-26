@@ -2,6 +2,9 @@
 #define HEADER_H
 #include "limits.h"
 #include <stdarg.h>
+#include <string.h>
+#include <stdlib.h>
+
 /**
  * struct format - the format components
  * @c: a char
@@ -19,6 +22,7 @@ int print_string(va_list);
 int print_int(va_list);
 int conv(va_list, format_t *, const char *);
 int _putchar(char);
-int print_sign(int);
+int print_num(int);
+int print_percent(__attribute__ ((unused)) va_list);
 
 #endif
