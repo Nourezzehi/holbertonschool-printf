@@ -16,5 +16,6 @@ typedef struct format
 int _printf(const char *format, ...);
 void print_char(va_list);
 void print_string(va_list);
+int conv(va_list, format_t *, const char *);
 
 #endif
