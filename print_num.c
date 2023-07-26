@@ -1,8 +1,8 @@
 /**
  * print_num - print the number
  * depending on its sign
- * @num: the given number to print
- *
+ * @n: the given number to print
+ * Return: count
 */
 
 #include "main.h"

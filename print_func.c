@@ -12,7 +12,7 @@ int print_char(va_list args)
 
 	c = va_arg(args, int);
 	_putchar(c);
-	return(1);
+	return (1);
 }
 
 /**
@@ -57,7 +57,7 @@ int print_int(va_list args)
 
 	num = va_arg(args, int);
 	if (num == INT_MIN)
-	{	
+	{
 		_putchar('-');
 		count += print_num(-num / 10);
 		_putchar(8 + '0');
