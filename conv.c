@@ -24,7 +24,7 @@ int conv(va_list args_cp, format_t *tab, const char *format )
 			}
 			if (*(format + i) && !ok)
 			{
-			write(1, format + i, 2);
+			write(1, format + i - 1, 2);
 			}
 			i++;
 		}

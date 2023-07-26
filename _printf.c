@@ -6,7 +6,7 @@
 #include "main.h"
 int _printf(const char *format, ...)
 {
-	int count = 0;
+	int count;
 	va_list args, args_cp;
 	format_t tab[] = {
 		{'c', print_char},
