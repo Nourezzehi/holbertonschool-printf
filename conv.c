@@ -12,7 +12,7 @@
 
 int conv(va_list args, format_t *tab, const char *format)
 {
-	int ok, j, i = 0;
+	int ok, j, i = 0, count = 0;
 
 	while (*(format + i))
 	{
@@ -26,22 +26,24 @@ int conv(va_list args, format_t *tab, const char *format)
 				if (*(format + i) == (tab + j)->c)
 				{
 					ok = 1;
-					(tab + j)->f(args);
+					count += (tab + j)->f(args);
 				}
 				j++;
 			}
 			if (!ok)
 			{
 				write(1, format + i - 1, 2);
+				count += 2;
 			}
 			i++;
 		}
 		else
 		{
 			_putchar(*(format + i));
+			count ++;
 			i++;
 		}
 	}
 	va_end(args);
-	return (i);
+	return (count);
 }

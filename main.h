@@ -10,15 +10,15 @@
 typedef struct format
 {
 	char c;
-	void (*f)(va_list);
+	int (*f)(va_list);
 } format_t;
 #include <unistd.h>
 int _printf(const char *format, ...);
-void print_char(va_list);
-void print_string(va_list);
-void print_int(va_list);
+int print_char(va_list);
+int print_string(va_list);
+int print_int(va_list);
 int conv(va_list, format_t *, const char *);
 int _putchar(char);
-void print_sign(int);
+int print_sign(int);
 
 #endif

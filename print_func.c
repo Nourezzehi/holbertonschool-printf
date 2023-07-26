@@ -5,31 +5,34 @@
  * @args: the char to print
 */
 
-void print_char(va_list args)
+int print_char(va_list args)
 {
 	char c;
+	int i = 1;
 
 	c = va_arg(args, int);
 	_putchar(c);
+	return(i);
 }
 
 /**
  * print_string - print a string
  * @args: the sring to print
 */
-void print_string(va_list args)
+int print_string(va_list args)
 {
 	char *s;
 	int i = 0;
 
 	s = va_arg(args, char *);
 	if (!s)
-		return;
+		return (0);
 	while (*(s + i))
 	{
 		_putchar(*(s + i));
 		i++;
 	}
+	return (i);
 }
 
 /**
@@ -37,21 +40,24 @@ void print_string(va_list args)
  * @args: a va_list
 */
 
-void print_int(va_list args)
+int print_int(va_list args)
 {
-	int num;
+	int num, count = 0;
 
 	num = va_arg(args, int);
 	if (num == INT_MIN)
 	{
+		count++;
 		_putchar(INT_MIN % 10);
 		num /= 10;
 	}
 	if (num >= 0)
-		print_sign(num);
+		count += print_sign(num);
 	else
 	{
+		count++;
 		_putchar('-');
-		print_sign(-num);
+		count += print_sign(-num);
 	}
+	return (count);
 }
