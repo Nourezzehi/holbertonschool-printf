@@ -32,15 +32,22 @@ int conv(va_list args, format_t *tab, const char *format)
 			}
 			if (!ok)
 			{
+				if (*(format + i) == '%')
+				{
+					_putchar('%');
+					count++;
+				}
+				else{
 				write(1, format + i - 1, 2);
 				count += 2;
+				}
 			}
 			i++;
 		}
-		else
+		else if(*(format + i) != '%')
 		{
 			_putchar(*(format + i));
-			count ++;
+			count++;
 			i++;
 		}
 	}
