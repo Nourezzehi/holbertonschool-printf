@@ -25,9 +25,10 @@ void print_string(va_list args)
 	s = va_arg(args, char *);
 	if (!s)
 		return;
-	while(s + i)
+	while(*(s + i))
 	{
 		_putchar(*(s + i));
+		i++;
 	}
 }
 

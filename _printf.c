@@ -10,7 +10,9 @@ int _printf(const char *format, ...)
 	va_list args, args_cp;
 	format_t tab[] = {
 		{'c', print_char},
-		{'s', print_string}
+		{'s', print_string},
+		{'d', print_int},
+		{'i', print_int}
 	};
 
 	if (!format)
@@ -18,6 +20,5 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	va_copy(args_cp, args);
 	count = conv(args_cp, tab, format);
-	va_end(args_cp);
 	return (count);
 }

@@ -1,36 +1,47 @@
 #include "main.h"
 
-int conv(va_list args_cp, format_t *tab, const char *format )
+/**
+ * conv - do the all work here
+ *
+ * @args_cp : a va_list
+ * @tab: the struct to hold characters
+ * and their associated functions
+ * @format: the _printf given format
+ * Return: count of printed characters
+*/
+
+int conv(va_list args, format_t *tab, const char *format )
 {
-	int count = 0, ok, j, i = 0;
+	int ok, j, i = 0;
 
 	while (*(format + i))
 	{
 		ok = 0;
 		j = 0;
-		if (*(format + i) == '%')
+		if (*(format + i) == '%' && *(format + i + 1))
 		{
 			i++;
-			if (*(format + i) == '\0')
-				return (count);
-			while (j < 2 && !ok)
+			while (j < 4 && !ok)
 			{
 				if (*(format + i) == (tab + j)->c)
 				{
 					ok = 1;
-					(tab + j)->f(args_cp);
+					(tab + j)->f(args);
 				}
 				j++;
 			}
-			if (*(format + i) && !ok)
+			if (!ok)
 			{
-			write(1, format + i - 1, 2);
+				write(1, format + i - 1, 2);
 			}
+			i++;
 		}
 		else
+		{
 			_putchar(*(format + i));
-		count++;
-		i++;
+			i++;
+		}
 	}
-	return (count);
+	va_end(args);
+	return (i);
 }
