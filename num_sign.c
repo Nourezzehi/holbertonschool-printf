@@ -9,10 +9,10 @@
 
 void print_sign(int num)
 {
-    while(num / 10)
+	while (num / 10)
 	{
-	    _putchar(num % 10 + '0');
-	    num /= 10;
+		_putchar(num % 10 + '0');
+		num /= 10;
 	}
 	if (num % 10)
 		_putchar(num + '0');

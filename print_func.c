@@ -25,12 +25,17 @@ void print_string(va_list args)
 	s = va_arg(args, char *);
 	if (!s)
 		return;
-	while(*(s + i))
+	while (*(s + i))
 	{
 		_putchar(*(s + i));
 		i++;
 	}
 }
+
+/**
+ * print_int - print an integer
+ * @args: a va_list
+*/
 
 void print_int(va_list args)
 {
@@ -38,10 +43,10 @@ void print_int(va_list args)
 
 	num = va_arg(args, int);
 	if (num == INT_MIN)
-		{
-			_putchar(INT_MIN % 10);
-			num /= 10;
-		}
+	{
+		_putchar(INT_MIN % 10);
+		num /= 10;
+	}
 	if (num >= 0)
 		print_sign(num);
 	else

@@ -3,14 +3,14 @@
 /**
  * conv - do the all work here
  *
- * @args_cp : a va_list
+ * @args: a va_list
  * @tab: the struct to hold characters
  * and their associated functions
  * @format: the _printf given format
  * Return: count of printed characters
 */
 
-int conv(va_list args, format_t *tab, const char *format )
+int conv(va_list args, format_t *tab, const char *format)
 {
 	int ok, j, i = 0;
 
