@@ -40,8 +40,9 @@ int main(void)
     printf("Address:[%p]\n", addr);
     len = _printf("Percent:[%%]\n");
     len2 = printf("Percent:[%%]\n");
-    _printf("Len:[%d]\n", len);
+    _printf("Len:[%d]\n", len2);
     printf("Len:[%d]\n", len2);
+    printf("Len:[%d]\n", len);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     _printf("%%\n");

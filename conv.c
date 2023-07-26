@@ -14,7 +14,7 @@ int conv(va_list args, format_t *tab, const char *format)
 {
 	int ok, j, i = 0, count = 0;
 
-	while (*(format + i) != '\0')
+	while (*(format + i))
 	{
 		ok = 0;
 		j = 0;
