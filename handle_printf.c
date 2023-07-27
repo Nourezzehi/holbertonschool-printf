@@ -10,7 +10,7 @@
  * Return: count of printed characters
 */
 
-int conv(va_list args, format_t *tab, const char *format)
+int handle(va_list args, format_t *tab, const char *format)
 {
 	int ok, j, i = 0, count = 0;
 
@@ -37,6 +37,8 @@ int conv(va_list args, format_t *tab, const char *format)
 			}
 			i++;
 		}
+		else if(*(format + i) == '%' && !(*(format + i + 1)))
+			return (count);
 		else if (*(format + i))
 		{
 			_putchar(*(format + i));
