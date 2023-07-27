@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * conv - do the all work here
+ * handle - do the all work here
  *
  * @args: a va_list
  * @tab: the struct to hold characters
@@ -44,7 +44,7 @@ int handle(va_list args, format_t *tab, const char *format)
 			i++;
 		}
 		else
-			return(count);
+			return (count);
 	}
 	va_end(args);
 	return (count);
