@@ -18,8 +18,10 @@ int handle(va_list args, format_t *tab, const char *format)
 	{
 		ok = 0;
 		j = 0;
-		if (*(format + i) == '%' && *(format + i + 1))
+		if (*(format + i) == '%')
 		{
+			if (!*(format + i + 1))
+				return (count);
 			i++;
 			while (j < 5 && !ok)
 			{
@@ -43,8 +45,6 @@ int handle(va_list args, format_t *tab, const char *format)
 			count++;
 			i++;
 		}
-		else
-			return (count);
 	}
 	va_end(args);
 	return (count);
