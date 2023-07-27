@@ -16,6 +16,8 @@ int handle(va_list args, format_t *tab, const char *format)
 
 	if (!format || (*format == '%' && !*(format + 1)))
 		return (-1);
+	(if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 	while (*(format + i))
 	{
 		if (*(format + i) == '%' && !*(format + 1 + i))
