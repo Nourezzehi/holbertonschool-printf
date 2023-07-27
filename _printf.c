@@ -20,4 +20,5 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	va_copy(args_cp, args);
 	return (handle(args_cp, tab, format));
+	va_end(args);
 }
