@@ -19,7 +19,7 @@ int handle(va_list args, format_t *tab, const char *format)
 	while (*(format + i))
 	{
 		if (*(format + i) == '%' && !*(format + 1 + i))
-			return (count);
+			return (-1);
 		ok = 0;
 		j = 0;
 		if (*(format + i) == '%')
