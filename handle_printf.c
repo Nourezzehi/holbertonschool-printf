@@ -18,6 +18,8 @@ int handle(va_list args, format_t *tab, const char *format)
 		return (-1);
 	while (*(format + i))
 	{
+		if (*(format + i) == '%' && !*(format + 1 + i))
+			return (count);
 		ok = 0;
 		j = 0;
 		if (*(format + i) == '%')
