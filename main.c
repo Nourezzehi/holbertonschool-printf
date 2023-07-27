@@ -17,7 +17,6 @@ int main(void)
     void __attribute__((unused)) *addr;
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
-    _printf("%c\n", k);
     _printf("hello %s, %c\n", s, k);
     ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
@@ -46,5 +45,6 @@ int main(void)
     printf("Unknown:[%r]\n");
     _printf("%%\n");
     _printf("%\n");
+     _printf("%c\n");
     return (0);
 }
