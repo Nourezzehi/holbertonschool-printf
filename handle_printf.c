@@ -37,14 +37,14 @@ int handle(va_list args, format_t *tab, const char *format)
 			}
 			i++;
 		}
-		else if(*(format + i) == '%' && !(*(format + i + 1)))
-			return (count);
-		else if (*(format + i))
+		else if (*(format + i) != '%' && *(format + i) != '\0')
 		{
 			_putchar(*(format + i));
 			count++;
 			i++;
 		}
+		else
+			return(count);
 	}
 	va_end(args);
 	return (count);
