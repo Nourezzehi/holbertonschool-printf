@@ -6,7 +6,7 @@
 #include "main.h"
 int _printf(const char *format, ...)
 {
-	va_list args, args_cp;
+	va_list args;
 	format_t tab[] = {
 		{'c', print_char},
 		{'s', print_string},
@@ -18,7 +18,6 @@ int _printf(const char *format, ...)
 	if (!format)
 		return (0);
 	va_start(args, format);
-	va_copy(args_cp, args);
-	return (handle(args_cp, tab, format));
+	return (handle(args, tab, format));
 	va_end(args);
 }
