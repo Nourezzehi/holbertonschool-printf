@@ -41,8 +41,9 @@ int print_string(va_list args)
  * Return: count
 */
 
-int print_percent(__attribute__ ((unused)) va_list args)
+int print_percent(va_list args)
 {
+	(void)args;
 	_putchar('%');
 	return (1);
 }
