@@ -6,14 +6,16 @@
  *
  * @base: the given base
  *
- *@lower_case: true or false 
+ * @lower_case: true or false
+ * Return: the converted string in
+ * the required base
 */
 #include "main.h"
 
 char *convert(unsigned long int num, int base, int lower_case)
 {
-	static char *rep;
-	static char buffer[50];
+	char *rep;
+	char buffer[50];
 	char *ptr;
 
 	if (lower_case)
@@ -26,6 +28,5 @@ char *convert(unsigned long int num, int base, int lower_case)
 		*--ptr = rep[num % base];
 		num /= base;
 	} while (num != 0);
-
 	return (ptr);
 }
