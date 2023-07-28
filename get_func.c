@@ -20,7 +20,7 @@ int (*get_func(char ch))(va_list args)
 		{'b', print_binary}
 	};
 
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 6; i++)
 	{
 		if ((tab + i)->c == ch)
 			return ((tab + i)->f);
