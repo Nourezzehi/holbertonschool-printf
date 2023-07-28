@@ -23,6 +23,7 @@ int _printf(const char *format, ...);
 int (*get_func(const char ch))(va_list);
 int _putchar(char);
 int print_num(int);
+int print_decimal(va_list);
 int print_percent(__attribute__ ((unused)) va_list);
 
 #endif
