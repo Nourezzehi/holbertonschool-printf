@@ -21,6 +21,8 @@ int print_string(va_list);
 int print_int(va_list);
 int _printf(const char *format, ...);
 int (*get_func(const char ch))(va_list);
+int _puts(char *);
+int print_binary(va_list);
 int _putchar(char);
 int print_decimal(va_list);
 int print_percent(__attribute__ ((unused)) va_list);
