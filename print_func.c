@@ -52,7 +52,7 @@ int print_percent(va_list args)
  * @args: a va_list
  * Return: count
 */
-int print_int(va_list Project)
+int print_int(va_list args)
 {
-	return (print_decimal(Project));
+	return (print_decimal(args));
 }
