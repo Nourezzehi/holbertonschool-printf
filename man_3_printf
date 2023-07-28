@@ -12,20 +12,20 @@ SYNOPSIS
     int _printf(const char * format, ...);
 
 DESCRIPTION
-    The _printf function is a custom implementation of the printf function in the C programming language.
-
-    It allows formatted output to the standard output stream based on the format string provided.
-
-    This function supports a limited set of format specifiers and performs specific actions based on each specifier encountred in the format string.
-
-    The format string may contain ordinary characters (not %),which are copied unchanged to the output stream.
-
-    Format specifiers start with % and are followed by conversion characters that indicates the type of data to be printed.
+    TThe _printf function is a custom implementation of the standard printf function in the C programming language.
+     
+     Its purpose is to facilitate formatted output to the standard output stream, typically the console, by utilizing a format
+    
+    string provided as an argument. The format string comprises ordinary characters, which are copied 
+    
+    as is to the output stream, and format specifiers, which are recognized by the % symbol followed by conversion characters. Each conversion character 
+    
+    specifies the data type to be printed and triggers specific actions during the printing process.
 
 
 
 Return Value
-    The _printf function returns the number of characters written to the standard output. In case of an error or invalid input, it returns a negative value.
+    The _printf function returns the number of characters written to the standard output. In case of an error or invalid input, it returns (-1).
 
 Format specifiers
     The _printf function supports the followig format specifiers:
