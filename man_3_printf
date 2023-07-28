@@ -1,0 +1,44 @@
+PRINTF
+
+
+NAME
+
+    _printf - Custom printf-like original function
+
+
+SYNOPSIS
+    #include "main.h"
+
+    int _printf(const char * format, ...);
+
+DESCRIPTION
+    The _printf function is a custom implementation of the printf function in the C programming language.
+
+    It allows formatted output to the standard output stream based on the format string provided.
+
+    This function supports a limited set of format specifiers and performs specific actions based on each specifier encountred in the format string.
+
+    The format string may contain ordinary characters (not %),which are copied unchanged to the output stream.
+
+    Format specifiers start with % and are followed by conversion characters that indicates the type of data to be printed.
+
+
+
+Return Value
+    The _printf function returns the number of characters written to the standard output. In case of an error or invalid input, it returns a negative value.
+
+Format specifiers
+    The _printf function supports the followig format specifiers:
+
+    %c Character - prints a single character specified by the corresponding argument.
+
+    %s String - prints a null-terminated string specified by the corresponding argument.
+
+    %d and %i Signed Decimal integer - prints a signed decimal integer specified by the corresponding argument.
+
+
+Authors
+    This custom _printf functions was implemented by [Ezzehi Nour] 
+
+SEE ALSO
+    printf(3)
