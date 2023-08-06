@@ -1,7 +1,7 @@
                                 <-- C - printf -->
 
 Description:
-* This project aims to creat my own _printf() function which replicates the C standard library printf() function.
+ This project aims to creat my own _printf() function which replicates the C standard library printf() function.
 
 What I learned from this project:
 - Applying variadic functions to a big project
