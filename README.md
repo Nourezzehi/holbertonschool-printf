@@ -1,4 +1,4 @@
-                                <-- 0x10. C - printf -->
+                                <-- C - printf -->
 
 Description:
 * This project aims to creat my own _printf() function which replicates the C standard library printf() function.
