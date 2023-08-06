@@ -19,7 +19,7 @@ int (*get_func(char ch))(va_list args)
 		{'i', print_int}
 	};
 
-	for (i = 0; i < 6; i++)
+	for (i = 0; i < 5; i++)
 	{
 		if ((tab + i)->c == ch)
 			return ((tab + i)->f);
