@@ -16,8 +16,7 @@ int (*get_func(char ch))(va_list args)
 		{'s', print_string},
 		{'%', print_percent},
 		{'d', print_int},
-		{'i', print_int},
-		{'b', print_binary}
+		{'i', print_int}
 	};
 
 	for (i = 0; i < 6; i++)

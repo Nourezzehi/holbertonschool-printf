@@ -37,7 +37,7 @@ Format specifiers
     %d and %i Signed Decimal integer - prints a signed decimal integer specified by the corresponding argument.
 
 
-Authors
+Author
     This custom _printf functions was implemented by [Ezzehi Nour] 
 
 SEE ALSO
